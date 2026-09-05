@@ -34,7 +34,10 @@
             max-width: 430px;
             height: 100vh;
             max-height: 932px;
-            background-color: var(--black);
+            background-image: url('images/bg-main.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -46,7 +49,7 @@
             padding: 3px;
             text-align: center;
             border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-            background-color: var(--dark-card);
+            background-color: rgba(65, 105, 225, 0.85); /* Ľahko priehľadné pozadie, aby presvitalo pozadie appky */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -70,6 +73,10 @@
             margin-bottom: 15px;
             border-left: 3px solid var(--pink);
             padding-left: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            padding-right: 10px;
+            border-radius: 4px;
         }
 
         .grid-menu {
@@ -82,8 +89,6 @@
             position: relative;
             height: 130px;
             background-color: var(--dark-card);
-            /* Až budeš mať fotky, stačí sem odkomentovať riadok nižšie a nahrať ich do priečinka images */
-            /* background-image: url('images/zoo-bg.jpg'); */
             background-size: cover;
             background-position: center;
             border-radius: 12px;
@@ -139,7 +144,7 @@
         nav {
             display: flex;
             justify-content: space-around;
-            background-color: var(--dark-card);
+            background-color: rgba(65, 105, 225, 0.9);
             border-top: 1px solid rgba(212, 175, 55, 0.3);
             padding: 12px 0;
         }
