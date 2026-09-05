@@ -10,9 +10,9 @@ const zooAnimals = [
     },
     {
         id: 'lion',
-        name: 'Lion',
+        name: 'African Lion',
         image: 'images/lion.png',
-        description: 'Kráľ zvierat žijúci v afganských stepiach a savanách. Žijú v rodinných svorkách nazývaných pýcha.',
+        description: 'The African lion is a very large cat. Lions once roamed throughout southern Europe, Africa and southwest Asia. Today the African lion can only be found in sub-Saharan Africa and a small pocket of Asiatic lions are found in the Gir Forest, India. African lions live in the grassy plains and savannah of Southern Africa. The most recognisable feature of the lion is the large mane which only male lions grow. Muscular legs and strong jaws coupled with good eyesight, hearing and sense of smell make lions excellent hunters. Lions are carnivores (meat eaters) hunting for wildebeest, buffalo, giraffe, zebra and antelope. It is the females who do most of the hunting. Males can reach over 8 feet (2.5 metres) long, and a large male may weigh up to 550 pounds (200 kilos). Lions live in groups of up to 30 individuals which consist of 2 or 3 males, up to 10 related females (sisters and cousins) and their young. This group is called a pride. Lots of females enable the pride to operate a crèche system, freeing up some females to hunt whilst others tend the young. With a short gestation period of up to 120 days and up to 6 to a litter, the cubs are very vulnerable for the first few years of life. Once fully grown, however, the lion has virtually no predators. Cubs are born with spots on their fur, which gradually fade as they mature. At 3 years of age the young males are driven from the pride and form single sex groups which roam around trying to take over established prides.',
         photos: ['images/lion-1.jpg', 'images/lion-2.jpg'],
         mapImage: 'images/map-lion.jpg'
     },
