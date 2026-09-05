@@ -43,23 +43,19 @@
         }
 
         header {
-            padding: 20px;
+            padding: 15px;
             text-align: center;
             border-bottom: 1px solid rgba(212, 175, 55, 0.3);
             background-color: var(--dark-card);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        header h1 {
-            color: var(--pink);
-            font-size: 24px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        header p {
-            color: var(--gold);
-            font-size: 12px;
-            margin-top: 4px;
+        .logo {
+            max-height: 40px;
+            width: auto;
+            object-fit: contain;
         }
 
         .content {
@@ -129,8 +125,7 @@
 
     <div class="app-container">
         <header>
-            <h1>Flamingo</h1>
-            <p>UK Theme Park</p>
+            <img src="images/logo1.png" alt="Flamingo Logo" class="logo">
         </header>
 
         <div class="content">
