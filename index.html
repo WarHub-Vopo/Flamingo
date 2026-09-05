@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flamingo Theme Park</title>
+    <style>
+        :root {
+            --pink: #ff2a85;
+            --black: #0b0b0b;
+            --dark-card: #161616;
+            --gold: #d4af37;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 430px;
+            height: 100vh;
+            max-height: 932px;
+            background-color: var(--black);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 2px solid var(--gold);
+            position: relative;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            background-color: var(--dark-card);
+        }
+
+        header h1 {
+            color: var(--pink);
+            font-size: 24px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            color: var(--gold);
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            color: var(--gold);
+            margin-bottom: 15px;
+            border-left: 3px solid var(--pink);
+            padding-left: 10px;
+        }
+
+        .grid-menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .card {
+            background-color: var(--dark-card);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--pink);
+            transform: translateY(-2px);
+        }
+
+        .card h3 {
+            color: var(--white);
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: var(--dark-card);
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 12px 0;
+        }
+
+        .nav-item {
+            color: var(--white);
+            font-size: 11px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            color: var(--pink);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>Flamingo</h1>
+            <p>UK Theme Park</p>
+        </header>
+
+        <div class="content">
+            <h2 class="section-title">Atrakcie & Sekcie</h2>
+            <div class="grid-menu">
+                <div class="card" onclick="openSection('Zoo')">
+                    <h3>Zoo</h3>
+                </div>
+                <div class="card" onclick="openSection('Arcades')">
+                    <h3>Arcades</h3>
+                </div>
+                <div class="card" onclick="openSection('Games')">
+                    <h3>Games</h3>
+                </div>
+                <div class="card" onclick="openSection('Food & Beverage')">
+                    <h3>Food & Beverage</h3>
+                </div>
+                <div class="card" onclick="openSection('Entertainment')">
+                    <h3>Entertainment</h3>
+                </div>
+            </div>
+        </div>
+
+        <nav>
+            <div class="nav-item active" onclick="navigate('Home')">Domov</div>
+            <div class="nav-item" onclick="navigate('Map')">Mapa</div>
+            <div class="nav-item" onclick="navigate('Tickets')">Lístky</div>
+            <div class="nav-item" onclick="navigate('Profile')">Profil</div>
+        </nav>
+    </div>
+
+    <script>
+        function openSection(sectionName) {
+            console.log("Otvoril si sekciu: " + sectionName);
+            // Tu neskôr doplníme logiku pre prepínanie stránok alebo zobrazenie detailov
+            alert(`Vitaj v sekcii: ${sectionName}`);
+        }
+
+        function navigate(tabName) {
+            console.log("Navigácia na: " + tabName);
+        }
+    </script>
+</body>
+</html>
