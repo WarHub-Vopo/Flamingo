@@ -79,13 +79,29 @@
         }
 
         .card {
+            position: relative;
+            height: 130px;
             background-color: var(--dark-card);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            /* Až budeš mať fotky, stačí sem odkomentovať riadok nižšie a nahrať ich do priečinka images */
+            /* background-image: url('images/zoo-bg.jpg'); */
+            background-size: cover;
+            background-position: center;
             border-radius: 12px;
-            padding: 20px;
-            text-align: center;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.3);
             cursor: pointer;
-            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        /* Tmavý preliv cez fotku, aby bol text dokonale čitateľný */
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
         }
 
         .card:hover {
@@ -94,9 +110,30 @@
         }
 
         .card h3 {
+            position: relative;
+            z-index: 1;
             color: var(--white);
-            font-size: 14px;
-            margin-top: 10px;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            animation: shineEffect 2.5s infinite ease-in-out;
+        }
+
+        /* Animácia lesku: prechod od žiarivej kombinácie do matnejšej a späť */
+        @keyframes shineEffect {
+            0% {
+                color: var(--white);
+                text-shadow: 0 0 8px var(--gold), 0 0 20px var(--pink);
+            }
+            50% {
+                color: #b0b0b0;
+                text-shadow: none;
+            }
+            100% {
+                color: var(--white);
+                text-shadow: 0 0 8px var(--gold), 0 0 20px var(--pink);
+            }
         }
 
         nav {
