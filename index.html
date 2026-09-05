@@ -67,18 +67,6 @@
             padding: 20px;
         }
 
-        .section-title {
-            font-size: 18px;
-            color: var(--pink);
-            margin-bottom: 15px;
-            border-left: 3px solid var(--pink);
-            padding-left: 10px;
-            background: rgba(0, 0, 0, 0.6);
-            display: inline-block;
-            padding-right: 10px;
-            border-radius: 4px;
-        }
-
         .grid-menu {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -113,7 +101,7 @@
             transform: translateY(-2px);
         }
 
-        /* Vlastné ohraničenia a pulzujúci lesk pre jednotlivé tlačidlá */
+        /* Vlastné ohraničenia a pulzujúci lesk pre jednotlivé tlačidlá vrátane MAP */
         .card-zoo {
             border-color: #2ecc71;
             animation: borderGlowGreen 2.5s infinite ease-in-out;
@@ -137,6 +125,10 @@
         .card-entertainment {
             border-color: #ff2a85;
             animation: borderGlowPink 2.5s infinite ease-in-out;
+        }
+        .card-map {
+            border-color: #00ffff;
+            animation: borderGlowCyan 2.5s infinite ease-in-out;
         }
 
         .card h3 {
@@ -203,25 +195,10 @@
             100% { border-color: #ff2a85; box-shadow: 0 0 8px rgba(255, 42, 133, 0.8); }
         }
 
-        nav {
-            display: flex;
-            justify-content: space-around;
-            background-color: rgba(65, 105, 225, 0.9);
-            border-top: 1px solid rgba(212, 175, 55, 0.3);
-            padding: 12px 0;
-        }
-
-        .nav-item {
-            color: var(--white);
-            font-size: 11px;
-            text-align: center;
-            cursor: pointer;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .nav-item:hover, .nav-item.active {
-            color: var(--pink);
+        @keyframes borderGlowCyan {
+            0% { border-color: #00ffff; box-shadow: 0 0 8px rgba(0, 255, 255, 0.8); }
+            50% { border-color: rgba(0, 255, 255, 0.3); box-shadow: none; }
+            100% { border-color: #00ffff; box-shadow: 0 0 8px rgba(0, 255, 255, 0.8); }
         }
     </style>
 </head>
@@ -233,7 +210,6 @@
         </header>
 
         <div class="content">
-            <h2 class="section-title">Attractions & Sections</h2>
             <div class="grid-menu">
                 <div class="card card-zoo" onclick="openSection('Zoo')" style="background-image: url('images/zoo-bg.jpg');">
                     <h3 style="font-size: 50px;">Zoo</h3>
@@ -251,27 +227,20 @@
                     <h3 style="font-size: 34px;">Food & Drink</h3>
                 </div>
                 <div class="card card-entertainment" onclick="openSection('Entertainment')" style="background-image: url('images/entertainment-bg.png');">
-                    <h3>Entertainment</h3>
+                    <h3 style="font-size: 30px;">Entertainment</h3>
+                </div>
+                <!-- Pridané tlačidlo MAP namiesto spodnej lišty -->
+                <div class="card card-map" onclick="openSection('Map')" style="background-image: url('images/map-bg.jpg');">
+                    <h3 style="font-size: 50px;">Map</h3>
                 </div>
             </div>
         </div>
-
-        <nav>
-            <div class="nav-item active" onclick="navigate('Home')">Home</div>
-            <div class="nav-item" onclick="navigate('Map')">Map</div>
-            <div class="nav-item" onclick="navigate('Tickets')">Tickets</div>
-            <div class="nav-item" onclick="navigate('Profile')">Profile</div>
-        </nav>
     </div>
 
     <script>
         function openSection(sectionName) {
             console.log("Opened section: " + sectionName);
             alert(`Welcome to section: ${sectionName}`);
-        }
-
-        function navigate(tabName) {
-            console.log("Navigated to: " + tabName);
         }
     </script>
 </body>
