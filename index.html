@@ -49,7 +49,7 @@
             padding: 3px;
             text-align: center;
             border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-            background-color: rgba(65, 105, 225, 0.85); /* Ľahko priehľadné pozadie, aby presvitalo pozadie appky */
+            background-color: rgba(65, 105, 225, 0.85);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -101,7 +101,6 @@
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
-        /* Tmavý preliv cez fotku, aby bol text dokonale čitateľný */
         .card::before {
             content: '';
             position: absolute;
@@ -125,7 +124,6 @@
             animation: shineEffect 2.5s infinite ease-in-out;
         }
 
-        /* Animácia lesku: prechod od žiarivej kombinácie do matnejšej a späť */
         @keyframes shineEffect {
             0% {
                 color: var(--white);
@@ -175,6 +173,9 @@
             <div class="grid-menu">
                 <div class="card" onclick="openSection('Zoo')">
                     <h3>Zoo</h3>
+                </div>
+                <div class="card" onclick="openSection('Rides')">
+                    <h3>Rides</h3>
                 </div>
                 <div class="card" onclick="openSection('Arcades')">
                     <h3>Arcades</h3>
