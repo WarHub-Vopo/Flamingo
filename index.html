@@ -93,12 +93,13 @@
             background-position: center;
             border-radius: 12px;
             overflow: hidden;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-width: 2px;
+            border-style: solid;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
         .card::before {
@@ -109,8 +110,33 @@
         }
 
         .card:hover {
-            border-color: var(--pink);
             transform: translateY(-2px);
+        }
+
+        /* Vlastné ohraničenia a pulzujúci lesk pre jednotlivé tlačidlá */
+        .card-zoo {
+            border-color: #2ecc71;
+            animation: borderGlowGreen 2.5s infinite ease-in-out;
+        }
+        .card-rides {
+            border-color: #3498db;
+            animation: borderGlowBlue 2.5s infinite ease-in-out;
+        }
+        .card-arcades {
+            border-color: #d4af37;
+            animation: borderGlowGold 2.5s infinite ease-in-out;
+        }
+        .card-games {
+            border-color: #e74c3c;
+            animation: borderGlowRed 2.5s infinite ease-in-out;
+        }
+        .card-food {
+            border-color: #f1c40f;
+            animation: borderGlowYellow 2.5s infinite ease-in-out;
+        }
+        .card-entertainment {
+            border-color: #ff2a85;
+            animation: borderGlowPink 2.5s infinite ease-in-out;
         }
 
         .card h3 {
@@ -124,6 +150,7 @@
             animation: shineEffect 2.5s infinite ease-in-out;
         }
 
+        /* Animácia lesku textu */
         @keyframes shineEffect {
             0% {
                 color: var(--white);
@@ -137,6 +164,43 @@
                 color: var(--white);
                 text-shadow: 0 0 8px var(--gold), 0 0 20px var(--pink);
             }
+        }
+
+        /* Animácie pulzovania pre orámovania jednotlivých tlačidiel */
+        @keyframes borderGlowGreen {
+            0% { border-color: #2ecc71; box-shadow: 0 0 8px rgba(46, 204, 113, 0.8); }
+            50% { border-color: rgba(46, 204, 113, 0.3); box-shadow: none; }
+            100% { border-color: #2ecc71; box-shadow: 0 0 8px rgba(46, 204, 113, 0.8); }
+        }
+
+        @keyframes borderGlowBlue {
+            0% { border-color: #3498db; box-shadow: 0 0 8px rgba(52, 152, 219, 0.8); }
+            50% { border-color: rgba(52, 152, 219, 0.3); box-shadow: none; }
+            100% { border-color: #3498db; box-shadow: 0 0 8px rgba(52, 152, 219, 0.8); }
+        }
+
+        @keyframes borderGlowGold {
+            0% { border-color: #d4af37; box-shadow: 0 0 8px rgba(212, 175, 55, 0.8); }
+            50% { border-color: rgba(212, 175, 55, 0.3); box-shadow: none; }
+            100% { border-color: #d4af37; box-shadow: 0 0 8px rgba(212, 175, 55, 0.8); }
+        }
+
+        @keyframes borderGlowRed {
+            0% { border-color: #e74c3c; box-shadow: 0 0 8px rgba(231, 76, 60, 0.8); }
+            50% { border-color: rgba(231, 76, 60, 0.3); box-shadow: none; }
+            100% { border-color: #e74c3c; box-shadow: 0 0 8px rgba(231, 76, 60, 0.8); }
+        }
+
+        @keyframes borderGlowYellow {
+            0% { border-color: #f1c40f; box-shadow: 0 0 8px rgba(241, 196, 15, 0.8); }
+            50% { border-color: rgba(241, 196, 15, 0.3); box-shadow: none; }
+            100% { border-color: #f1c40f; box-shadow: 0 0 8px rgba(241, 196, 15, 0.8); }
+        }
+
+        @keyframes borderGlowPink {
+            0% { border-color: #ff2a85; box-shadow: 0 0 8px rgba(255, 42, 133, 0.8); }
+            50% { border-color: rgba(255, 42, 133, 0.3); box-shadow: none; }
+            100% { border-color: #ff2a85; box-shadow: 0 0 8px rgba(255, 42, 133, 0.8); }
         }
 
         nav {
@@ -171,22 +235,22 @@
         <div class="content">
             <h2 class="section-title">Attractions & Sections</h2>
             <div class="grid-menu">
-                <div class="card" onclick="openSection('Zoo')" style="background-image: url('images/zoo-bg.jpg');">
+                <div class="card card-zoo" onclick="openSection('Zoo')" style="background-image: url('images/zoo-bg.jpg');">
                     <h3 style="font-size: 50px;">Zoo</h3>
                 </div>
-                <div class="card" onclick="openSection('Rides')" style="background-image: url('images/rides-bg.jpg');">
+                <div class="card card-rides" onclick="openSection('Rides')" style="background-image: url('images/rides-bg.jpg');">
                     <h3 style="font-size: 50px;">Rides</h3>
                 </div>
-                <div class="card" onclick="openSection('Arcades')">
+                <div class="card card-arcades" onclick="openSection('Arcades')">
                     <h3>Arcades</h3>
                 </div>
-                <div class="card" onclick="openSection('Games')">
+                <div class="card card-games" onclick="openSection('Games')">
                     <h3 style="font-size: 48px;">Games</h3>
                 </div>
-                <div class="card" onclick="openSection('Food & Beverage')">
+                <div class="card card-food" onclick="openSection('Food & Beverage')">
                     <h3>Food & Beverage</h3>
                 </div>
-                <div class="card" onclick="openSection('Entertainment')">
+                <div class="card card-entertainment" onclick="openSection('Entertainment')">
                     <h3>Entertainment</h3>
                 </div>
             </div>
