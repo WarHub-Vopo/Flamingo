@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
         :root {
             --pink: #ff2a85;
             --black: #0b0b0b;
-            --dark-card: #161616;
+            --dark-card: #4169e1;
             --gold: #d4af37;
             --white: #ffffff;
         }
@@ -70,7 +70,7 @@
 
         .section-title {
             font-size: 18px;
-            color: var(--gold);
+            color: var(--pink);
             margin-bottom: 15px;
             border-left: 3px solid var(--pink);
             padding-left: 10px;
@@ -134,7 +134,7 @@
         </header>
 
         <div class="content">
-            <h2 class="section-title">Atrakcie & Sekcie</h2>
+            <h2 class="section-title">Attractions & Sections</h2>
             <div class="grid-menu">
                 <div class="card" onclick="openSection('Zoo')">
                     <h3>Zoo</h3>
@@ -155,22 +155,21 @@
         </div>
 
         <nav>
-            <div class="nav-item active" onclick="navigate('Home')">Domov</div>
-            <div class="nav-item" onclick="navigate('Map')">Mapa</div>
-            <div class="nav-item" onclick="navigate('Tickets')">Lístky</div>
-            <div class="nav-item" onclick="navigate('Profile')">Profil</div>
+            <div class="nav-item active" onclick="navigate('Home')">Home</div>
+            <div class="nav-item" onclick="navigate('Map')">Map</div>
+            <div class="nav-item" onclick="navigate('Tickets')">Tickets</div>
+            <div class="nav-item" onclick="navigate('Profile')">Profile</div>
         </nav>
     </div>
 
     <script>
         function openSection(sectionName) {
-            console.log("Otvoril si sekciu: " + sectionName);
-            // Tu neskôr doplníme logiku pre prepínanie stránok alebo zobrazenie detailov
-            alert(`Vitaj v sekcii: ${sectionName}`);
+            console.log("Opened section: " + sectionName);
+            alert(`Welcome to section: ${sectionName}`);
         }
 
         function navigate(tabName) {
-            console.log("Navigácia na: " + tabName);
+            console.log("Navigated to: " + tabName);
         }
     </script>
 </body>
