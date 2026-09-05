@@ -11,7 +11,7 @@ const zooAnimals = [
     {
         id: 'lion',
         name: 'Lion',
-        image: 'images/lion.jpg',
+        image: 'images/lion.png',
         description: 'Kráľ zvierat žijúci v afganských stepiach a savanách. Žijú v rodinných svorkách nazývaných pýcha.',
         photos: ['images/lion-1.jpg', 'images/lion-2.jpg'],
         mapImage: 'images/map-lion.jpg'
