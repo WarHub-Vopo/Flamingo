@@ -17,11 +17,11 @@ const zooAnimals = [
         mapImage: 'images/map-lion.jpg'
     },
     {
-        id: 'elephant',
-        name: 'Elephant',
-        image: 'images/elephant.jpg',
-        description: 'Najväčší žijúci suchozemský cicavec. Vyznačuje sa dlhým chobotom a kly.',
-        photos: ['images/elephant-1.jpg'],
+        id: 'hippopotamus',
+        name: 'Hippopotamus',
+        image: 'images/hippopotamus.jpg',
+        description: 'The hippopotamus, literally translated, means river horse. They spend their days in water as their skin is very susceptible to sun-burning. They are herbivores consuming between 1 and 1.5% of their body weight in vegetation every day!',
+        photos: ['images/hippopotamus-1.jpg', 'images/hippopotamus-2.jpg'],
         mapImage: 'images/map-elephant.jpg'
     },
     {
