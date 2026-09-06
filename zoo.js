@@ -35,7 +35,7 @@ const zooAnimals = [
     {
         id: 'hamadryas baboon',
         name: 'Hamadryas Baboon',
-        image: 'images/monkey.jpg',
+        image: 'images/hamadryas baboon.jpg',
         description: 'The baboon is the largest type of monkey. Hamadryas baboons originate from Ethiopia, Saudi Arabia, Somalia and Yemen. They prefer rocky desert and sub-desert regions. These very intelligent primates are endangered in the wild due to loss of habitat.',
         photos: ['images/hamadryas baboon-1.jpg', 'images/hamadryas baboon-2.jpg'],
         mapImage: 'images/map-monkey.jpg'
