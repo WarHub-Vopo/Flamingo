@@ -26,10 +26,10 @@ const zooAnimals = [
     },
     {
         id: 'giraffe',
-        name: 'Giraffe',
+        name: 'Rothschild’s Giraffe',
         image: 'images/giraffe.jpg',
-        description: 'Najvyšší suchozemský živočích na svete, pochádzajúci z afrických saván.',
-        photos: ['images/giraffe-1.jpg'],
+        description: 'There are currently 9 different sub-species of giraffes roaming the plains of Africa. One of the most endangered are the Rothschild’s with only a few hundred remaining in the wild.',
+        photos: ['images/giraffe-1.jpg', 'images/giraffe-2.jpg'],
         mapImage: 'images/map-giraffe.jpg'
     },
     {
