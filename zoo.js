@@ -2,9 +2,9 @@
 const zooAnimals = [
     {
         id: 'tiger',
-        name: 'Tiger',
+        name: 'Sumatran Tiger',
         image: 'images/tiger.jpg',
-        description: 'Majestátna mačkovitá šelma, ktorá pochádza z Ázie. Je známa svojou charakteristickou pruhovanou srsťou a výborným nočným videním.',
+        description: 'The Sumatran tiger is the smallest of the tigers, compared to the Siberian tiger which is the largest. The stripes of the Sumatran tiger are narrower than other tigers and they have larger manes. The males are bigger than the females but they still only reach 2.5m in length. Their small size allows them to travel through the dense Sumatran rainforest with ease.',
         photos: ['images/tiger-1.jpg', 'images/tiger-2.jpg'],
         mapImage: 'images/map-tiger.jpg'
     },
